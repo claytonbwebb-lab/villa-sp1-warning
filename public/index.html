@@ -392,6 +392,122 @@
       padding: 8px;
     }
 
+    /* ── VIDEO EMBED ── */
+    .video-section {
+      background: #000;
+      padding: 4px 0;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+      gap: 4px;
+    }
+
+    .video-card {
+      position: relative;
+      background: #111;
+      border: 2px solid #222;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.3s;
+    }
+
+    .video-card:hover { border-color: var(--red); }
+
+    .video-card-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-card-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .play-btn {
+      width: 64px;
+      height: 64px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .video-card-label {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .video-card-meta {
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
+      text-align: center;
+      padding: 0 20px 16px;
+    }
+
+    /* ── DRIVE EMBED MODAL ── */
+    .drive-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.95);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .drive-modal.open { display: flex; }
+
+    .drive-modal-inner {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .drive-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .drive-modal-header p {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+    }
+
+    .drive-modal-close {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 4px 8px;
+      line-height: 1;
+    }
+
+    .drive-modal iframe {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+      border-radius: 8px;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .hero-content { padding: 40px 16px 60px; }
@@ -436,7 +552,7 @@
   <div class="photo-section">
     <img
       class="photo-full"
-      src="assets/images/IMG_1949.jpeg"
+      src="assets/images/IMG_1940.jpeg"
       alt="Villa SP1 — the reality"
       onerror="this.parentElement.style.display='none'"
     >
@@ -461,28 +577,13 @@
       </div>
 
       <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="assets/images/IMG_1977.jpeg" alt="Villa exterior" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23111%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2214%22>IMG_1977</text></svg>'">
-        <div class="gallery-caption">The exterior — promised luxury, delivered neglect</div>
-      </div>
-
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="assets/images/IMG_1981.jpeg" alt="Pool area" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23111%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2214%22>IMG_1981</text></svg>'">
-        <div class="gallery-caption">The pool — green, unsafe, unusable</div>
-      </div>
-
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="assets/images/IMG_2006.jpeg" alt="Bedroom condition" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23111%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2214%22>IMG_2006</text></svg>'">
-        <div class="gallery-caption">Bedrooms — far from the listing standard</div>
+        <img src="assets/images/IMG_1979.jpeg" alt="Villa interior" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23111%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2214%22>IMG_1979</text></svg>'">
+        <div class="gallery-caption">The reality inside — not what was promised</div>
       </div>
 
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="assets/images/IMG_2007.jpeg" alt="Interior condition" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23111%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2214%22>IMG_2007</text></svg>'">
         <div class="gallery-caption">Indoor living space — worn, dated, neglected</div>
-      </div>
-
-      <div class="gallery-item" onclick="openLightbox(this)">
-        <img src="assets/images/IMG_2028.jpeg" alt="Bathroom condition" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23111%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23666%22 font-size=%2214%22>IMG_2028</text></svg>'">
-        <div class="gallery-caption">Bathroom — mould, damaged surfaces, poor maintenance</div>
       </div>
 
     </div>
@@ -536,6 +637,31 @@
     </div>
   </section>
 
+  <!-- VIDEO SECTION -->
+  <section class="video-section">
+    <div class="video-grid">
+
+      <div class="video-card" onclick="openVideoModal('1bv2zppEJ6dhF5RW2Kq6x05oKbiC2_Gb8', 'Villa Walkthrough — Part 1')">
+        <img class="video-card-thumb" src="assets/images/IMG_1940.jpeg" alt="Video thumbnail">
+        <div class="video-card-overlay">
+          <div class="play-btn">▶</div>
+          <div class="video-card-label">Villa SP1 — Walkthrough Part 1</div>
+          <div class="video-card-meta">GoPro footage · August 2026 · 1 min excerpt</div>
+        </div>
+      </div>
+
+      <div class="video-card" onclick="openVideoModal('1s15iUMu4_2ghJXzUx-xJKfFBwYki7x4f', 'Villa Walkthrough — Part 2')">
+        <img class="video-card-thumb" src="assets/images/IMG_1949.jpeg" alt="Video thumbnail">
+        <div class="video-card-overlay">
+          <div class="play-btn">▶</div>
+          <div class="video-card-label">Villa SP1 — Walkthrough Part 2</div>
+          <div class="video-card-meta">GoPro footage · August 2026 · 1 min excerpt</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- MORE PHOTOS -->
   <div class="gallery">
     <div class="gallery-grid">
@@ -578,6 +704,18 @@
     <img id="lightbox-img" src="" alt="Full size">
   </div>
 
+  <!-- DRIVE VIDEO MODAL -->
+  <div class="drive-modal" id="driveModal" onclick="closeVideoModal(event)">
+    <div class="drive-modal-inner">
+      <div class="drive-modal-header">
+        <p id="driveModalLabel">Watch video</p>
+        <button class="drive-modal-close" onclick="closeVideoModal(event)">×</button>
+      </div>
+      <iframe id="driveModalFrame" src="" allow="autoplay; fullscreen" loading="lazy"></iframe>
+      <p style="color:rgba(255,255,255,0.4);font-size:12px;text-align:center;margin-top:12px;">Video opens in Google Drive viewer. For the full unedited footage, <a href="https://drive.google.com/drive/folders/1uTEZsQPJitubu__NCxQg25BCOKysP2dv" target="_blank" style="color:rgba(255,255,255,0.6);">view all files in Google Drive</a>.</p>
+    </div>
+  </div>
+
   <script>
     function openLightbox(el) {
       const img = el.querySelector('img');
@@ -595,9 +733,27 @@
       }
     }
 
+    function openVideoModal(fileId, label) {
+      document.getElementById('driveModalLabel').textContent = label;
+      document.getElementById('driveModalFrame').src =
+        'https://drive.google.com/file/d/' + fileId + '/preview';
+      document.getElementById('driveModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal(e) {
+      if (e.target.id === 'driveModal' || e.target.classList.contains('drive-modal-close')) {
+        document.getElementById('driveModal').classList.remove('open');
+        document.getElementById('driveModalFrame').src = '';
+        document.body.style.overflow = '';
+      }
+    }
+
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
         document.getElementById('lightbox').classList.remove('open');
+        document.getElementById('driveModal').classList.remove('open');
+        document.getElementById('driveModalFrame').src = '';
         document.body.style.overflow = '';
       }
     });
