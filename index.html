@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Villa SP1 Suites Santa Ponsa – Guest Warning & Evidence | Sealand Villas</title>
-  <meta name="description" content="Honest guest warning about Villa SP1 Suites Santa Ponsa by Sealand Villas. Air conditioning failure, severe smells, unusable pool, and more — documented with photos and videos from our August 2026 stay.">
+  <title>Villa SP1 Suites Santa Ponsa Review – What The Listings Don't Show | Sealand Villas Warning</title>
+  <meta name="description" content="Honest guest review of Villa SP1 Suites Santa Ponsa by Sealand Villas. Documented evidence of AC failure, severe smells, degraded pool, damaged outdoor furniture, unsafe trampoline, and more — from our August 2026 stay.">
+  <meta name="keywords" content="Villa SP1 Suites Santa Ponsa review, Sealand Villas Mallorca warning, Santa Ponsa villa review, Mallorca villa scam, Villa SP1 Suites真实评价">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://villasp1santaponsawarning.co.uk/">
+  <link rel="canonical" href="https://villa-sp1-warning.vercel.app/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Villa SP1 Suites Santa Ponsa – Guest Warning">
-  <meta property="og:description" content="Air conditioning failure, severe smells, unusable pool, and more. Read our documented experience before you book.">
+  <meta property="og:title" content="Villa SP1 Suites Santa Ponsa – What The Listings Don't Show">
+  <meta property="og:description" content="Air conditioning failure, overpowering smell, unusable bedroom, unsafe trampoline, rusted BBQ, damaged umbrellas. Our documented review with photos.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://villasp1santaponsawarning.co.uk/">
-  <meta property="og:image" content="https://villasp1santaponsawarning.co.uk/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://villa-sp1-warning.vercel.app/">
+  <meta property="og:image" content="https://villa-sp1-warning.vercel.app/assets/images/og-image.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -101,6 +102,30 @@
       color: var(--gray-200);
     }
     .hero .stay-meta strong { color: var(--white); }
+
+    /* LISTING CLAIM BANNER */
+    .listing-claim {
+      background: var(--gray-900);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .listing-claim .claim-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .listing-claim p {
+      color: var(--gray-400);
+      font-size: 15px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .listing-claim p strong { color: var(--gray-200); }
 
     /* WARNING BANNER */
     .warning-banner {
@@ -225,6 +250,33 @@
       transition: opacity 0.2s;
     }
     .photo-wrap:hover .photo-zoom { opacity: 1; background: rgba(0,0,0,0.35); }
+
+    /* SIDE-BY-SIDE COMPARISON */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 600px) { .comparison-grid { grid-template-columns: 1fr; } }
+    .comparison-item {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--gray-200);
+    }
+    .comparison-item.listing { border-color: #16a34a; }
+    .comparison-item.real { border-color: var(--red); }
+    .comparison-header {
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .comparison-item.listing .comparison-header { background: #dcfce7; color: #16a34a; }
+    .comparison-item.real .comparison-header { background: var(--red-light); color: var(--red); }
+    .comparison-img { aspect-ratio: 4/3; overflow: hidden; }
+    .comparison-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .comparison-caption { padding: 8px 12px; font-size: 12px; color: var(--gray-700); background: var(--gray-50); }
 
     /* PRIOR GUEST */
     .prior-guest {
@@ -369,6 +421,57 @@
     }
     .independent-evidence li::before { content: '✓'; color: var(--red); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
+    /* FAQ ACCORDION */
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 24px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-question::after { content: '+'; font-size: 20px; color: var(--gray-500); }
+    .faq-item.open .faq-question::after { content: '−'; }
+    .faq-answer {
+      display: none;
+      padding: 0 24px 18px;
+      font-size: 14px;
+      color: var(--gray-700);
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* BOOKING LINKS */
+    .booking-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .booking-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      color: var(--gray-700);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .booking-link:hover { background: var(--gray-200); }
+
     @media (max-width: 500px) {
       .cta-bar { flex-direction: column; text-align: center; }
       .photo-grid { grid-template-columns: repeat(2, 1fr); }
@@ -382,18 +485,78 @@
     "@type": "Review",
     "itemReviewed": {
       "@type": "VacationRental",
-      "name": "Villa SP1 Suites Santa Ponsa by Sealand Villas",
+      "name": "Villa SP1 Suites Santa Ponsa",
+      "additionalType": "https://schema.org/House",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Santa Ponsa",
         "addressRegion": "Mallorca",
         "addressCountry": "ES"
-      }
+      },
+      "geo": { "@type": "GeoCoordinates", "addressLocality": "Santa Ponsa" }
     },
     "reviewRating": { "@type": "Rating", "ratingValue": "1", "worstRating": "1", "bestRating": "5" },
     "author": { "@type": "Person", "name": "Verified Guest" },
-    "reviewBody": "Severe air conditioning failure, persistent smells, unusable bedroom, murky pool water, non-functioning TVs, and multiple maintenance failures throughout our August 2026 stay.",
-    "datePublished": "2026-09-06"
+    "reviewBody": "Severe air conditioning failure, persistent smells, unusable bedroom, murky pool water, damaged outdoor furniture, unsafe trampoline, rusted BBQ, and multiple maintenance failures throughout August 2026 stay.",
+    "datePublished": "2026-09-06",
+    "publisher": { "@type": "Organization", "name": "Villa SP1 Warning" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Villa SP1 Suites Santa Ponsa worth booking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Based on documented evidence from an August 2026 stay, we would not recommend booking this property. Issues included air conditioning failure, severe persistent smells making one bedroom unusable, degraded pool water quality, unsafe trampoline, rusted outdoor furniture, and damaged umbrellas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Villa SP1 Suites Santa Ponsa match its listing photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The listing photos show pristine outdoor furniture, undamaged umbrellas, clean artificial turf, a tidy garden shed, and well-maintained outdoor facilities. The reality included worn/dirty furniture, severely damaged umbrellas with frayed fabric, rusted BBQ, debris-covered artificial turf, a cluttered/weathered shed, and an unsafe trampoline with destroyed padding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What was wrong with the air conditioning at Villa SP1 Suites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AC controllers displayed 'Time to clean filter' maintenance warnings from arrival. A contractor found heavily contaminated filters and significant internal deposits. After cleaning, a new repetitive noise developed approximately every 8–10 seconds overnight, requiring a second technical visit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Villa SP1 Suites pool safe to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pool water became cloudy and murky repeatedly throughout the stay despite professional maintenance. Underwater tile markings and dark deposits were visible. A prior guest on Airbnb (July 2026) also reported the pool cleaning system did not function well."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can children safely use the garden facilities at Villa SP1 Suites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The garden had an unsafe shed that was considered hazardous around children, and a trampoline with destroyed padding, exposed foam, rusted frame, and debris on the jumping surface — meaning children were not allowed to use it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much did the guests request as a refund?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guests paid €15,142 for a substantially diminished stay with multiple unresolved issues throughout. They requested a 50% refund (€7,517). Sealand Villas offered €2,147 (approximately 13.6% of the total) which was rejected as inadequate."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -402,23 +565,29 @@
   <!-- HEADER -->
   <header class="site-header">
     <span class="icon">⚠️</span>
-    <p>This is a guest warning site — not affiliated with Booking.com, Sealand Villas, or Villa SP1 Suites</p>
+    <p>This is a guest warning site — not affiliated with Booking.com, Sealand Villas, VRBO, or Villa SP1 Suites</p>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <span class="eyebrow">⚠️ Guest Warning — Read Before Booking</span>
     <h1>Villa SP1 Suites<br><span>Santa Ponsa</span></h1>
-    <p class="subtitle">A documented account of air conditioning failure, severe persistent smells, an unusable bedroom, murky pool water, and a catalogue of maintenance failures during our August 2026 stay.</p>
+    <p class="subtitle">A documented review of an August 2026 stay. The villa looked great in the listings. The reality was a different story entirely.</p>
     <div class="stay-meta">
       <span>📅</span>
       <span><strong>23–30 August 2026</strong> &nbsp;·&nbsp; Santa Ponsa, Mallorca &nbsp;·&nbsp; Booked via Booking.com</span>
     </div>
   </section>
 
+  <!-- LISTING CLAIM vs REALITY -->
+  <section class="listing-claim">
+    <div class="claim-label">The Listing Says</div>
+    <p>"A <strong>modern villa designed for those seeking a luxurious holiday experience</strong> in a peaceful and privileged area of southwest Mallorca. The property offers privacy, generous space, and all the comforts needed for an <strong>unforgettable stay</strong>." — Sealand Villas listing</p>
+  </section>
+
   <!-- WARNING BANNER -->
   <div class="warning-banner">
-    <strong>⚠️ If you're considering booking this villa, please read this page in full before deciding.</strong>
+    <strong>⚠️ If you're considering booking this villa, please read this page in full first.</strong>
   </div>
 
   <!-- SUMMARY -->
@@ -447,10 +616,143 @@
     </div>
   </section>
 
+  <!-- LISTING vs REALITY COMPARISON -->
+  <section class="evidence-section" id="reality">
+    <h2>📸 The Listing Photos vs. What We Found</h2>
+    <p class="section-intro">Every property listing uses the best angles. Here's what the promotional photos don't show — and what you won't see until you're standing there yourself.</p>
+
+    <div class="issue-card">
+      <div class="issue-header">
+        <span class="issue-tag">The Gap</span>
+        <h3>Listing photos: pristine pool area. Reality: damaged umbrellas, worn furniture, debris everywhere.</h3>
+        <p>The listing shows the covered porch and pool area in clean, inviting conditions. What you actually found: severely frayed and torn umbrella fabric, sun-bleached worn cushions, a rusted BBQ, and a pool area covered in debris.</p>
+      </div>
+      <div class="issue-evidence">
+        <div class="evidence-label">The Reality — Pool & Patio Area</div>
+        <div class="photo-grid">
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1471---aff11ef9-13d6-4644-8a46-a209ee296a8e.jpg" alt="Villa SP1 outdoor furniture reality" loading="lazy">
+            <div class="photo-label">Worn, sun-bleached outdoor furniture — not shown in listing</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1472---a824c288-3544-4728-b7ba-97c26d73c74e.jpg" alt="Villa SP1 umbrella damage" loading="lazy">
+            <div class="photo-label">Umbrella fabric — frayed, torn, hanging loose</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1473---7e4ad70d-ee21-435e-81cc-446b0152aa71.jpg" alt="Villa SP1 garden planter" loading="lazy">
+            <div class="photo-label">Garden — poorly maintained, exposed wiring, debris</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1474---a226523c-6bbb-4c85-ae74-09ab0683210a.jpg" alt="Villa SP1 outdoor furniture cushion" loading="lazy">
+            <div class="photo-label">Cushions — worn, stained, faded from sun exposure</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1475---8d98895d-63bc-48b2-a786-7c4539a78550.jpg" alt="Villa SP1 garden area" loading="lazy">
+            <div class="photo-label">Garden — overgrown, debris-covered, neglected</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1491---82d15fd2-aaf0-4837-91ab-38e327e8d7e5.jpg" alt="Villa SP1 rusted clothes rack" loading="lazy">
+            <div class="photo-label">Clothes drying rack — heavily rusted, sun-bleached</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card">
+      <div class="issue-header">
+        <span class="issue-tag">Safety Hazard</span>
+        <h3>The trampoline: not a photo opportunity — a safety hazard.</h3>
+        <p>The listing shows a garden with recreational facilities. What it doesn't show: a trampoline with padding so destroyed the foam is exposed and crumbling, a rusted frame, and debris covering the entire jumping surface. Children were banned from using it.</p>
+      </div>
+      <div class="issue-evidence">
+        <div class="evidence-label">Trampoline Condition — Documented</div>
+        <div class="photo-grid">
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1486---64d99fdd-9500-4356-9203-a46dc85686c5.jpg" alt="Villa SP1 trampoline overview" loading="lazy">
+            <div class="photo-label">Full view — padding destroyed, frame rusted, debris on mat</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1487---ccf4923a-7e29-4ace-815b-818e2c24e7ad.jpg" alt="Villa SP1 trampoline close up" loading="lazy">
+            <div class="photo-label">Close-up of padding — foam exposed, fabric shredded</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1488---de1105f8-da9d-4cb8-81c0-93de2359d33d.jpg" alt="Villa SP1 trampoline edge" loading="lazy">
+            <div class="photo-label">Edge padding — torn, faded, crumbling foam visible</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1489---e2b2fc3a-e5ad-4a59-a654-93d52f8a58cc.jpg" alt="Villa SP1 artificial turf" loading="lazy">
+            <div class="photo-label">Artificial turf — debris-covered, leaves, pine needles throughout</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1490---73a7ccf2-46f1-4702-a66b-0d303d200cfb.jpg" alt="Villa SP1 turf debris" loading="lazy">
+            <div class="photo-label">Turf surface — scattered debris, dirt, neglected condition</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1483---b72d974a-0dd5-4e6c-9ca9-daec59342215.jpg" alt="Villa SP1 battle rope" loading="lazy">
+            <div class="photo-label">Battle rope on turf — left out, sun-damaged, neglected</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card">
+      <div class="issue-header">
+        <span class="issue-tag">Not What Was Sold</span>
+        <h3>The BBQ: listed as a feature. Rusted, dirty, and barely functional.</h3>
+        <p>Sealand's listing advertises a "BBQ Freestanding" and "Portable gas BBQ" as facilities. The reality: a dirty stainless steel BBQ with heavy grease soot staining the front panels, a rusted gas bottle, and a general condition that didn't inspire confidence in its use.</p>
+      </div>
+      <div class="issue-evidence">
+        <div class="evidence-label">BBQ Condition — As Found</div>
+        <div class="photo-grid">
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1478---a87155a2-b1e5-4008-838e-4e9e2414595f.jpg" alt="Villa SP1 BBQ dirty" loading="lazy">
+            <div class="photo-label">BBQ front — heavy grease soot and staining</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="issue-card">
+      <div class="issue-header">
+        <span class="issue-tag">Hidden from Listings</span>
+        <h3>The garden shed: cluttered, weathered, and unsafe around children.</h3>
+        <p>Described in listings only as a "quiet private garden." In reality: a dark, cluttered shed containing a jumble of pool inflatables, children's toys, bags, and tarpaulins — with no organisation, poor lighting, and items in various states of disrepair. Not shown in a single listing photo.</p>
+      </div>
+      <div class="issue-evidence">
+        <div class="evidence-label">Shed Interior — As Found</div>
+        <div class="photo-grid">
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1484---edb6b924-ece4-4366-9beb-d5c4816c6cfb.jpg" alt="Villa SP1 shed interior" loading="lazy">
+            <div class="photo-label">Shed interior — cluttered, disorganised, mixed items</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+          <div class="photo-wrap">
+            <img src="assets/images/IMG_1485---f08fca05-d87a-4f40-a421-744b063a2332.jpg" alt="Villa SP1 shed contents" loading="lazy">
+            <div class="photo-label">Pool floats, toys, bags — stored haphazardly, no organisation</div>
+            <div class="photo-zoom">🔍 View</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SMELLS & AC -->
-  <section class="evidence-section">
+  <section class="evidence-section" id="smells">
     <h2>🚨 Issue 1: Persistent Smells & Air Conditioning Failure</h2>
-    <p class="section-intro">The most serious issue. A strong offensive smell was present throughout the villa from arrival. The advertised air conditioning system failed in multiple ways.</p>
+    <p class="section-intro">The most serious issue. An overpowering offensive smell was present throughout the villa from arrival. The advertised air conditioning system failed in multiple ways.</p>
 
     <div class="issue-card">
       <div class="issue-header">
@@ -464,22 +766,22 @@
           <div class="photo-wrap">
             <img src="assets/images/IMG_1939.jpeg" alt="Villa SP1 Suites - affected bedroom" loading="lazy">
             <div class="photo-label">Affected bedroom — unusable throughout stay</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1940.jpeg" alt="Villa SP1 Suites - bedroom smell evidence" loading="lazy">
             <div class="photo-label">Bedroom condition documented on arrival</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1977.jpeg" alt="Villa SP1 Suites - bedding smell evidence" loading="lazy">
             <div class="photo-label">Bedding after second clean — smell returned</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1978.jpeg" alt="Villa SP1 Suites - bedroom smell" loading="lazy">
             <div class="photo-label">Persistent smell damage to bedding</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
         </div>
       </div>
@@ -489,7 +791,7 @@
       <div class="issue-header">
         <span class="issue-tag">Maintenance Failure</span>
         <h3>AC controllers showed "Time to clean filter" warning from arrival</h3>
-        <p>The air conditioning units displayed maintenance warnings on their controllers from the very first day. When specialist contractors from CMS attended on 26 August — communicating via Google Translate — they found heavily dust-loaded filters and significant visible contamination inside the system.</p>
+        <p>The air conditioning units displayed maintenance warnings on their controllers from the very first day. When specialist contractors attended on 26 August — communicating via Google Translate — they found heavily dust-loaded filters and significant visible contamination inside the system.</p>
       </div>
       <div class="issue-evidence">
         <div class="evidence-label">AC Controller — Maintenance Warning Display</div>
@@ -497,35 +799,35 @@
           <div class="photo-wrap">
             <img src="assets/images/IMG_1981.jpeg" alt="AC unit showing maintenance warning" loading="lazy">
             <div class="photo-label">AC unit displaying "Time to clean filter" — day 1</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1980.png" alt="AC maintenance warning screenshot" loading="lazy">
             <div class="photo-label">Controller maintenance warning screenshot</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
         </div>
         <div class="evidence-label" style="margin-top:16px;">AC Filters & Internal Contamination — Before Cleaning</div>
         <div class="photo-grid">
           <div class="photo-wrap">
             <img src="assets/images/IMG_1982.jpeg" alt="Contaminated AC filter - Villa SP1" loading="lazy">
-            <div class="photo-label">AC filter — heavily contaminated, before CMS cleaning</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-label">AC filter — heavily contaminated, before contractor cleaning</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1983.jpeg" alt="AC internal deposits" loading="lazy">
             <div class="photo-label">Internal deposits inside AC unit — not normal for holiday rental</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1979.jpeg" alt="AC contamination evidence" loading="lazy">
             <div class="photo-label">Visible contamination inside AC system</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1984.png" alt="AC technical data" loading="lazy">
             <div class="photo-label">AC unit technical data — maintenance overdue</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
         </div>
         <div class="prior-guest">
@@ -539,7 +841,7 @@
       <div class="issue-header">
         <span class="issue-tag">Ongoing Problem</span>
         <h3>New AC noise developed after maintenance — every 8–10 seconds overnight</h3>
-        <p>After the CMS contractor cleaned the AC system on 26 August, a new repetitive noise developed approximately every 8–10 seconds overnight. This affected at least two bedrooms and required another technical attendance on 27 August. AC noise video recordings are preserved in the full evidence archive.</p>
+        <p>After the contractor cleaned the AC system on 26 August, a new repetitive noise developed approximately every 8–10 seconds overnight. This affected at least two bedrooms and required another technical attendance on 27 August. AC noise video recordings are preserved in the full evidence archive.</p>
       </div>
       <div class="issue-evidence">
         <div class="evidence-label">Full AC Noise Video Recordings</div>
@@ -557,7 +859,7 @@
   </section>
 
   <!-- POOL -->
-  <section class="evidence-section">
+  <section class="evidence-section" id="pool">
     <h2>🏊 Issue 2: Pool Deterioration & Water Quality</h2>
     <p class="section-intro">The private pool was a major advertised feature. Instead, it became a source of ongoing concern throughout the stay.</p>
 
@@ -565,7 +867,7 @@
       <div class="issue-header">
         <span class="issue-tag">Recurring Problem</span>
         <h3>Cloudy, murky pool water — despite professional maintenance</h3>
-        <p>Pool water became cloudy and murky repeatedly. The property manager (Sue) acknowledged the issue from photographs and arranged pool maintenance. We removed children's inflatables from the pool after this was raised. Despite this, the pool became cloudy again and had deteriorated further by checkout.</p>
+        <p>Pool water became cloudy and murky repeatedly. The property manager acknowledged the issue from photographs and arranged pool maintenance. We removed children's inflatables from the pool after this was raised. Despite this, the pool became cloudy again and had deteriorated further by checkout.</p>
       </div>
       <div class="issue-evidence">
         <div class="evidence-label">Pool Condition — Documented on Multiple Dates</div>
@@ -573,22 +875,22 @@
           <div class="photo-wrap">
             <img src="assets/images/IMG_1944.jpeg" alt="Villa SP1 pool cloudy water" loading="lazy">
             <div class="photo-label">Pool water — cloudy and murky (first occurrence)</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1949.jpeg" alt="Villa SP1 pool deterioration" loading="lazy">
             <div class="photo-label">Pool deterioration — recurring despite maintenance</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_1950.jpeg" alt="Villa SP1 pool condition" loading="lazy">
             <div class="photo-label">Pool at end of stay — continued deterioration</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_2028.jpeg" alt="Villa SP1 pool underwater markings" loading="lazy">
             <div class="photo-label">Underwater markings / dark deposits on pool tiles</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
         </div>
         <div class="prior-guest">
@@ -600,7 +902,7 @@
   </section>
 
   <!-- OTHER ISSUES -->
-  <section class="evidence-section">
+  <section class="evidence-section" id="other">
     <h2>🔧 Issue 3: Additional Failures</h2>
     <p class="section-intro">Beyond the major issues above, multiple other advertised facilities failed or were inadequate throughout the stay.</p>
 
@@ -624,12 +926,12 @@
           <div class="photo-wrap">
             <img src="assets/images/IMG_2006.jpeg" alt="Fallen curtain assembly - Villa SP1" loading="lazy">
             <div class="photo-label">Curtain/blind assembly — fallen in child's bedroom</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_2007.jpeg" alt="Fallen curtain detail" loading="lazy">
             <div class="photo-label">Detail of fallen assembly</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
         </div>
       </div>
@@ -642,22 +944,22 @@
         <p>The oven did not heat properly and could not be used as intended. Shower pressure was insufficient when more than approximately two showers were used simultaneously, requiring a family of nine to stagger showers through the night. The garden had a shed considered unsafe around children and a trampoline in a condition that meant children were not allowed to use it.</p>
       </div>
       <div class="issue-evidence">
-        <div class="evidence-label">Garden Condition Evidence</div>
+        <div class="evidence-label">Garden & Outdoor Facilities Evidence</div>
         <div class="photo-grid">
           <div class="photo-wrap">
             <img src="assets/images/IMG_2008.jpeg" alt="Villa SP1 garden condition" loading="lazy">
-            <div class="photo-label">Garden deterioration — shed unsafe, trampoline off-limits</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-label">Garden — unsafe shed, off-limits trampoline</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_2009.jpeg" alt="Villa SP1 garden facilities" loading="lazy">
             <div class="photo-label">Additional garden condition evidence</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
           <div class="photo-wrap">
             <img src="assets/images/IMG_2010.jpeg" alt="Villa SP1 outdoor facilities" loading="lazy">
             <div class="photo-label">Outdoor facility condition</div>
-            <div class="photo-zoom">🔍 View full</div>
+            <div class="photo-zoom">🔍 View</div>
           </div>
         </div>
       </div>
@@ -681,7 +983,7 @@
           </div>
           <div class="timeline-event">
             <div class="timeline-day">Day 4 — 26 Aug</div>
-            <p><strong>CMS AC contractor attends</strong> — heavily contaminated filters and internal deposits photographed before cleaning. Technician confirms condition "not normal for a holiday rental."</p>
+            <p><strong>AC contractor attends</strong> — heavily contaminated filters and internal deposits photographed before cleaning. Technician confirms condition "not normal for a holiday rental."</p>
           </div>
           <div class="timeline-event">
             <div class="timeline-day">Day 5 — 27 Aug</div>
@@ -704,6 +1006,48 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="evidence-section">
+    <h2>❓ Frequently Asked Questions</h2>
+    <p class="section-intro">Common questions about this villa, answered based on documented evidence.</p>
+
+    <div class="faq-item open">
+      <div class="faq-question">Is Villa SP1 Suites Santa Ponsa worth booking?</div>
+      <div class="faq-answer">Based on documented evidence from an August 2026 stay, we would not recommend booking this property. Issues included air conditioning failure, severe persistent smells making one bedroom unusable, degraded pool water quality, unsafe trampoline, rusted outdoor furniture, and damaged umbrellas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Does Villa SP1 Suites match its listing photos?</div>
+      <div class="faq-answer">No. The listing photos show pristine outdoor furniture, undamaged umbrellas, clean artificial turf, a tidy garden shed, and well-maintained outdoor facilities. The reality included worn/dirty furniture, severely damaged umbrellas with frayed fabric, rusted BBQ, debris-covered artificial turf, a cluttered/weathered shed, and an unsafe trampoline.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What was wrong with the air conditioning?</div>
+      <div class="faq-answer">AC controllers displayed 'Time to clean filter' maintenance warnings from arrival. A contractor found heavily contaminated filters and significant internal deposits. After cleaning, a new repetitive noise developed approximately every 8–10 seconds overnight, requiring a second technical visit.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Is the pool safe to use?</div>
+      <div class="faq-answer">Pool water became cloudy and murky repeatedly throughout the stay despite professional maintenance. Underwater tile markings and dark deposits were visible. A prior guest on Airbnb (July 2026) also reported the pool cleaning system did not function well.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can children safely use the garden facilities?</div>
+      <div class="faq-answer">No. The garden had an unsafe shed considered hazardous around children, and a trampoline with destroyed padding, exposed foam, rusted frame, and debris on the jumping surface — meaning children were not allowed to use it.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How was the refund request resolved?</div>
+      <div class="faq-answer">Guests paid €15,142 for a substantially diminished stay. They requested a 50% refund (€7,517). Sealand Villas offered €2,147 (approximately 13.6% of total) which was rejected as inadequate. The matter was escalated to Booking.com under reference 5630494883.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Where can I see the original listing?</div>
+      <div class="faq-answer">
+        This villa is listed on multiple platforms. Before booking, compare the listing photos with this page.
+        <div class="booking-links">
+          <a href="https://www.booking.com/hotel/es/villa-sp1-suites-santa-ponsa.en-gb.html" target="_blank" class="booking-link">Booking.com →</a>
+          <a href="https://www.sealandvillas.com/en/villas/spain/mallorca/santa-ponsa/villa-sp1-suites-santa-ponsa/" target="_blank" class="booking-link">Sealand Villas →</a>
+          <a href="https://www.vrbo.com/en-gb/p12078615" target="_blank" class="booking-link">VRBO →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- INDEPENDENT EVIDENCE -->
   <section class="evidence-section">
     <h2>📋 What This Site Is Based On</h2>
@@ -712,9 +1056,9 @@
         <div class="independent-evidence">
           <ul>
             <li>Day-by-day WhatsApp correspondence with property management, documented throughout the stay</li>
-            <li>Original photographs from multiple devices taken during the stay</li>
+            <li>Original photographs from multiple devices taken during the stay (including all new photos on this page)</li>
             <li>Original GoPro video footage including AC noise recordings, pool videos, and final walkthrough</li>
-            <li>Translated exchanges with CMS AC technicians (via Google Translate)</li>
+            <li>Translated exchanges with AC technicians (via Google Translate)</li>
             <li>AC contractor attendance records and identification</li>
             <li>Booking.com booking confirmation and financial records</li>
             <li>Independent prior-guest evidence from Airbnb (July 2026)</li>
@@ -766,8 +1110,20 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>This is an independent guest warning site. It is not affiliated with, endorsed by, or connected to Booking.com, Sealand Villas, or Villa SP1 Suites. All content is based on documented first-hand experience. Photos on this page are reproduced from the original evidence archive. <a href="https://drive.google.com/drive/folders/1uTEZsQPJitubu__NCxQg25BCOKysP2dv" target="_blank">View source evidence →</a></p>
+    <p>This is an independent guest warning site. It is not affiliated with, endorsed by, or connected to Booking.com, Sealand Villas, VRBO, or Villa SP1 Suites. All content is based on documented first-hand experience. Photos on this page are reproduced from the original evidence archive. <a href="https://drive.google.com/drive/folders/1uTEZsQPJitubu__NCxQg25BCOKysP2dv" target="_blank">View source evidence →</a></p>
   </footer>
+
+  <!-- FAQ ACCORDION SCRIPT -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function(q) {
+      q.addEventListener('click', function() {
+        var item = q.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(fi) { fi.classList.remove('open'); });
+        if (!wasOpen) { item.classList.add('open'); }
+      });
+    });
+  </script>
 
 </body>
 </html>
