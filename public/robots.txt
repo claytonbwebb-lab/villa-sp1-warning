@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://villa-sp1-warning.vercel.app/sitemap.xml
